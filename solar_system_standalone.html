@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>太空：太阳系自动公转动画演绎 (Standalone JZ/WeChat Whitelist SVG)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #020005;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+    .svg-container {
+      width: 100%;
+      height: 100vh;
+      max-width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="svg-container">
+    <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer space backdrop -->
+      <rect width="1920" height="1080" fill="#020006" />
+      <circle cx="960" cy="540" r="950" fill="#1e1b4b" opacity="0.12" />
+      <circle cx="960" cy="540" r="250" fill="#ea580c" opacity="0.06" />
+      <circle cx="960" cy="540" r="130" fill="#fef08a" opacity="0.1" />
+
+      <!-- Fixed Starfield stars background -->
+      <g opacity="0.65" pointer-events="none">
+        <circle cx="150" cy="180" r="1.5" fill="#ffffff" />
+        <circle cx="280" cy="140" r="1.2" fill="#ffffff" />
+        <circle cx="320" cy="190" r="2.0" fill="#fed7aa" />
+        <circle cx="1780" cy="210" r="1.8" fill="#93c5fd" />
+        <circle cx="110" cy="920" r="2.0" fill="#ffffff" />
+        <circle cx="1580" cy="850" r="2.2" fill="#fca5a5" />
+        <path d="M 400,200 Q 560,350 720,250 T 1100,400" fill="none" stroke="rgba(147, 197, 253, 0.05)" stroke-width="60" stroke-linecap="round" />
+        <path d="M 1200,800 Q 1400,900 1600,750" fill="none" stroke="rgba(192, 132, 252, 0.04)" stroke-width="80" stroke-linecap="round" />
+      </g>
+
+      <!-- Static Orbit Grids -->
+      <g pointer-events="none">
+        <g opacity="0.1" stroke="#ffffff" stroke-width="0.5">
+          <line x1="960" y1="0" x2="960" y2="1080" stroke-dasharray="5,5" />
+          <line x1="0" y1="540" x2="1920" y2="540" stroke-dasharray="5,5" />
+        </g>
+        <ellipse cx="960" cy="540" rx="130" ry="115" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="540" rx="185" ry="165" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="540" rx="245" ry="220" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="540" rx="310" ry="280" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="540" rx="450" ry="405" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="540" rx="580" ry="520" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="540" rx="700" ry="630" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="540" rx="810" ry="725" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.2" />
+        <ellipse cx="960" cy="555" rx="870" ry="710" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1.2" stroke-dasharray="4,4" transform="rotate(-15 960 540)" />
+      </g>
+
+      <!-- ==================== ASTEROID BELT (小行星带) ==================== -->
+      <g pointer-events="none">
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0 960 540" to="360 960 540" dur="180s" repeatCount="indefinite" />
+          <ellipse cx="960" cy="540" rx="365" ry="325" fill="none" stroke="#52525b" stroke-width="10" stroke-dasharray="2 18 1 12 3 22 1 15 2 28 4 10" opacity="0.5" />
+        </g>
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="45 960 540" to="405 960 540" dur="220s" repeatCount="indefinite" />
+          <ellipse cx="960" cy="540" rx="380" ry="342" fill="none" stroke="#71717a" stroke-width="14" stroke-dasharray="1 14 3 25 1 10 2 30" opacity="0.45" />
+        </g>
+      </g>
+
+      <!-- ==================== KUIPER BELT (柯伊伯带) ==================== -->
+      <g pointer-events="none">
+        <ellipse cx="960" cy="540" rx="920" ry="820" fill="none" stroke="#06b6d4" stroke-width="60" opacity="0.12" />
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0 960 540" to="360 960 540" dur="450s" repeatCount="indefinite" />
+          <ellipse cx="960" cy="540" rx="890" ry="790" fill="none" stroke="#0891b2" stroke-width="12" stroke-dasharray="3 35 1 20 2 40 4 15 1 50" opacity="0.55" />
+        </g>
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="120 960 540" to="480 960 540" dur="600s" repeatCount="indefinite" />
+          <ellipse cx="960" cy="540" rx="925" ry="825" fill="none" stroke="#0e7490" stroke-width="16" stroke-dasharray="2 45 4 20 1 55 2 30 3 40" opacity="0.45" />
+        </g>
+      </g>
+
+      <!-- ==================== SUN (太阳) ==================== -->
+      <g>
+        <circle cx="960" cy="540" r="42" fill="#ea580c" opacity="0.25">
+          <animate attributeName="r" values="36;42;36" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="960" cy="540" r="35" fill="#facc15" opacity="0.8" />
+        <circle cx="960" cy="540" r="28" fill="#fffbeb" />
+        <g transform="translate(960, 492)">
+          <rect x="-38" y="-9" width="76" height="21" rx="3" fill="rgba(8, 2, 20, 0.72)" stroke="rgba(234, 179, 8, 0.4)" stroke-width="0.5" />
+          <text text-anchor="middle" font-size="9" font-family="sans-serif" font-weight="bold" fill="#fef08a" y="0">太阳 / Sun</text>
+        </g>
+      </g>
+
+      <!-- Mercury / 水星 -->
+      <g>
+        <g>
+          <animateMotion path="M 830,540 a 130,115 0 1,1 260,0 a 130,115 0 1,1 -260,0" dur="8s" repeatCount="indefinite" rotate="0" />
+          <circle cx="0" cy="0" r="4.5" fill="#9ca3af" />
+          <g transform="translate(0, 18)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">水星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Mercury</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Venus / 金星 -->
+      <g>
+        <g>
+          <animateMotion path="M 775,540 a 185,165 0 1,1 370,0 a 185,165 0 1,1 -370,0" dur="14s" repeatCount="indefinite" rotate="0" />
+          <circle cx="0" cy="0" r="7.5" fill="#eab308" />
+          <g transform="translate(0, 21)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">金星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Venus</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Earth / 地球 -->
+      <g>
+        <g>
+          <animateMotion path="M 715,540 a 245,220 0 1,1 490,0 a 245,220 0 1,1 -490,0" dur="20s" repeatCount="indefinite" rotate="0" />
+          
+          <!-- Earth sphere -->
+          <circle cx="0" cy="0" r="8" fill="#3b82f6" />
+          
+          <!-- Moon System orbit and animation -->
+          <circle cx="0" cy="0" r="18" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" stroke-dasharray="1.5, 1.5" />
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite" />
+            <circle cx="18" cy="0" r="2.2" fill="#cbd5e1" />
+          </g>
+
+          <g transform="translate(0, 22)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">地球</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Earth</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Mars / 火星 -->
+      <g>
+        <g>
+          <animateMotion path="M 650,540 a 310,280 0 1,1 620,0 a 310,280 0 1,1 -620,0" dur="30s" repeatCount="indefinite" rotate="0" />
+          <circle cx="0" cy="0" r="6" fill="#ef4444" />
+
+          <!-- Phobos Orbit -->
+          <circle cx="0" cy="0" r="11" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.4" stroke-dasharray="1,1" />
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2.5s" repeatCount="indefinite" />
+            <circle cx="11" cy="0" r="1.4" fill="#cbd5e1" />
+          </g>
+
+          <!-- Deimos Orbit -->
+          <circle cx="0" cy="0" r="16" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.4" stroke-dasharray="1,1" />
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="5.5s" repeatCount="indefinite" />
+            <circle cx="16" cy="0" r="1.1" fill="#94a3b8" />
+          </g>
+
+          <g transform="translate(0, 20)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">火星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Mars</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Jupiter / 木星 -->
+      <g>
+        <g>
+          <animateMotion path="M 510,540 a 450,405 0 1,1 900,0 a 450,405 0 1,1 -900,0" dur="50s" repeatCount="indefinite" rotate="0" />
+          <circle cx="0" cy="0" r="19" fill="#f97316" />
+          <ellipse cx="6" cy="6" rx="3.5" ry="2" fill="#991b1b" opacity="0.85" />
+
+          <!-- Galilean Moons Io & Europa -->
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite" />
+            <circle cx="26" cy="0" r="1.8" fill="#eab308" />
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="5s" repeatCount="indefinite" />
+            <circle cx="32" cy="0" r="1.6" fill="#93c5fd" />
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="8s" repeatCount="indefinite" />
+            <circle cx="39" cy="0" r="2.2" fill="#cbd5e1" />
+          </g>
+
+          <g transform="translate(0, 36)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">木星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Jupiter</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Saturn / 土星 -->
+      <g>
+        <g>
+          <animateMotion path="M 380,540 a 580,520 0 1,1 1160,0 a 580,520 0 1,1 -1160,0" dur="80s" repeatCount="indefinite" rotate="0" />
+          
+          <!-- Back ring portion -->
+          <g transform="rotate(16)">
+            <ellipse cx="0" cy="0" rx="33" ry="112.5" fill="none" stroke="rgba(224, 186, 120, 0.45)" stroke-width="6" opacity="0.8" />
+          </g>
+
+          <circle cx="0" cy="0" r="15.5" fill="#facc15" />
+
+          <!-- Titan moon -->
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite" />
+            <circle cx="34" cy="0" r="2.3" fill="#f59e0b" />
+          </g>
+
+          <g transform="translate(0, 31)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">土星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Saturn</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Uranus / 天王星 -->
+      <g>
+        <g>
+          <animateMotion path="M 260,540 a 700,630 0 1,1 1400,0 a 700,630 0 1,1 -1400,0" dur="120s" repeatCount="indefinite" rotate="0" />
+          
+          <g transform="rotate(75)">
+            <ellipse cx="0" cy="0" rx="18" ry="4.5" fill="none" stroke="rgba(165, 243, 252, 0.3)" stroke-width="1.5" />
+          </g>
+          <circle cx="0" cy="0" r="11" fill="#22d3ee" />
+
+          <g transform="translate(0, 25)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">天王星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Uranus</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Neptune / 海王星 -->
+      <g>
+        <g>
+          <animateMotion path="M 150,540 a 810,725 0 1,1 1620,0 a 810,725 0 1,1 -1620,0" dur="170s" repeatCount="indefinite" rotate="0" />
+          <circle cx="0" cy="0" r="10.5" fill="#1d4ed8" />
+          
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite" />
+            <circle cx="20" cy="0" r="1.8" fill="#e2e8f0" />
+          </g>
+
+          <g transform="translate(0, 24)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.7)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#ffffff" y="0">海王星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#94a3b8" y="8">Neptune</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Pluto / 冥王星 (Highly eccentric, Kuiper Belt dwarf) -->
+      <g>
+        <g>
+          <animateMotion path="M 90,540 a 870,710 0 1,1 1740,0 a 870,710 0 1,1 -1740,0" dur="230s" repeatCount="indefinite" rotate="0" />
+          <circle cx="0" cy="0" r="3.2" fill="#cbd5e1" />
+          <g transform="translate(0, 12)">
+            <rect x="-36" y="-9" width="72" height="21" rx="3" fill="rgba(3, 1, 15, 0.72)" />
+            <text text-anchor="middle" font-size="8.5" font-family="sans-serif" fill="#cbd5e1" y="0">冥王星</text>
+            <text text-anchor="middle" font-size="6.5" font-family="sans-serif" fill="#64748b" y="8">Pluto</text>
+          </g>
+        </g>
+      </g>
+
+    </svg>
+  </div>
+</body>
+</html>

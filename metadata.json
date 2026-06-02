@@ -1,0 +1,6 @@
+{
+  "name": "Solar System SVG",
+  "description": "An interactive, beautiful, and precise 1920x1080 automated SVG simulation of the solar system, showcasing orbits, planets, major moons, and the Kuiper belt, with bilingual labels and interactive controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
